@@ -1,0 +1,44 @@
+[user]
+    name = Jean-Sébastien Hedde
+    email = jeanseb@au-fil-du.net
+[core]
+    editor = vim
+    # detect and fix some whitespace issues.
+    # trailing-space : spaces at the end of a line,
+    # space-before-tab : spaces before tabs at the beginning of a line.
+    # indent-with-non-tab : lines that begin with eight or more spaces instead of tabs (DISABLED)
+    whitespace = trailing-space,space-before-tab,-indent-with-non-tab
+[color]
+    ui = always
+[alias]
+    #############
+    sb = status -s -b
+    st = status
+    stp = status --porcelain
+    #############
+    ca = commit -a
+    cm = commit -m
+    cam = commit -am
+    ci = commit
+    ##############
+    co = checkout
+    ##############
+    lg = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+    ll = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lol = log --graph --decorate --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' --abbrev-commit
+    lola = log --graph --decorate --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' --abbrev-commit --all
+    lpush = "!git fetch; git --no-pager log origin/$(git currentbranch)..HEAD --oneline --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset'"
+    lpull = "!git fetch; git --no-pager log HEAD..origin/$(git currentbranch) --oneline --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset'"
+    whatsnew = "!git diff origin/$(git currentbranch)...HEAD"
+    whatscoming = "!git diff HEAD...origin/$(git currentbranch)"
+    currentbranch = "!git branch | grep \"^\\*\" | cut -d \" \" -f 2"
+
+    br = branch
+    df = diff
+    ##############
+    me = branch -a --merged
+    fa = fetch --all
+    rz = reset --hard HEAD
+    pullr = pull --rebase
+    unstage = reset HEAD
+    pushup = "!git push -u origin $(git currentbranch)"
