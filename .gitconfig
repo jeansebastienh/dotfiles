@@ -42,3 +42,5 @@
     pullr = pull --rebase
     unstage = reset HEAD
     pushup = "!git push -u origin $(git currentbranch)"
+[push]
+	default = simple
