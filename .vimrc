@@ -9,6 +9,7 @@ call vundle#begin()
 " Vundle plugins :
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-eunuch'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -68,3 +69,9 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 "set wildmenu " Show list instead of just completing
 "set wildmode=list:longest,full " Command <Tab> completion, list matches, then longest common part, then all.
 "set whichwrap=b,s,h,l,<,>,[,] " Backspace and cursor keys wrap too
+
+
+" NERDTreeConfig
+"let NERDTreeMapOpenInTab='<ENTER>'
+nnoremap ² :NERDTreeToggle<CR> <bar> :NERDTreeMirror<CR>
+nnoremap = :NERDTreeFind<CR>
