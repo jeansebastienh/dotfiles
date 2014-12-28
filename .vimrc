@@ -10,6 +10,7 @@ call vundle#begin()
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-eunuch'
 Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -71,7 +72,11 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 "set whichwrap=b,s,h,l,<,>,[,] " Backspace and cursor keys wrap too
 
 
-" NERDTreeConfig
+" NERDTree config
 "let NERDTreeMapOpenInTab='<ENTER>'
 nnoremap ² :NERDTreeToggle<CR> <bar> :NERDTreeMirror<CR>
 nnoremap = :NERDTreeFind<CR>
+
+" CtrlP config
+let g:ctrlp_root_markers = ['.git']
+set wildignore+=*/tmp/*,*/cache/*,*.so,*.swp,*.zip,*/web/coverage/*
