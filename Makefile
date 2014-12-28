@@ -15,4 +15,5 @@ vim:
 	rm -rf ~/.vim ~/.vimrc
 	ln -s $(SRCDIR)/.vimrc ~/.vimrc
 	ln -s $(SRCDIR)/.vim ~/.vim
+	vim +PluginInstall +qall
 
