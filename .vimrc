@@ -15,6 +15,10 @@ Plugin 'mhinz/vim-startify'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'tomtom/checksyntax_vim'
 Plugin 'godlygeek/tabular'
+Plugin 'Shougo/vimproc'
+Plugin 'Shougo/unite.vim'
+Plugin 'm2mdas/phpcomplete-extended'
+"Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,8 +73,6 @@ set hlsearch " Highlight search terms
 set ignorecase " Case insensitive search
 set smartcase " Case sensitive when uc present
 
-"" Completion
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 "set wildmenu " Show list instead of just completing
 "set wildmode=list:longest,full " Command <Tab> completion, list matches, then longest common part, then all.
 "set whichwrap=b,s,h,l,<,>,[,] " Backspace and cursor keys wrap too
@@ -91,3 +93,7 @@ set laststatus=2
 
 " checsyntax
 let g:checksyntax#auto_enable_rx = '.'
+
+" phpcomplete extended
+autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
+"let g:SuperTabDefaultCompletionType = "<c-x><c-o>"

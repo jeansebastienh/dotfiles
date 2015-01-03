@@ -16,4 +16,5 @@ vim:
 	ln -s $(SRCDIR)/.vimrc ~/.vimrc
 	ln -s $(SRCDIR)/.vim ~/.vim
 	vim +PluginInstall +qall
+	bash -c 'cd .vim/bundle/vimproc/ && make'
 
