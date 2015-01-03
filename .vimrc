@@ -12,6 +12,7 @@ Plugin 'tpope/vim-eunuch'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mhinz/vim-startify'
+Plugin 'Lokaltog/vim-powerline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -81,3 +82,7 @@ nnoremap = :NERDTreeFind<CR>
 " CtrlP config
 let g:ctrlp_root_markers = ['.git']
 set wildignore+=*/tmp/*,*/cache/*,*.so,*.swp,*.zip,*/web/coverage/*
+
+" powerline
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
