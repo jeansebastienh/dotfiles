@@ -14,6 +14,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mhinz/vim-startify'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'tomtom/checksyntax_vim'
+Plugin 'godlygeek/tabular'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
