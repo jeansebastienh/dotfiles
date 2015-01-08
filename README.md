@@ -3,7 +3,7 @@
 ## Installation :
 
 ```
-git clone https://github.com/jeansebastienh/dotfiles
+git clone --recursive https://github.com/jeansebastienh/dotfiles
 cd dotfiles
 make
 ```
