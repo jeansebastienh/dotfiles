@@ -1,3 +1,6 @@
 [submodule ".vim/bundle/Vundle.vim"]
 	path = .vim/bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle.vim.git
+[submodule ".vim/plugin/tpope-tabularize-pipe"]
+	path = .vim/plugin/tpope-tabularize-pipe
+	url = git@gist.github.com:/287147.git
