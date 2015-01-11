@@ -1,11 +1,10 @@
 SRCDIR := $(shell pwd)
+.PHONY: all bash
 
 all: vim git bash
 
 bash:
-	rm -f ~/.bash_aliases
-	ln -s $(SRCDIR)/.bash_aliases ~/.bash_aliases
-	bash -c '[[ `grep -c "bash_aliases" ~/.bashrc` -eq 0 ]] && echo ". ~/.bash_aliases" >> ~/.bashrc || echo "ok" > /dev/null'
+	bash -c '[[ `grep -c "bash/aliases/git.sh" ~/.bashrc` -eq 0 ]] && echo ". $(SRCDIR)/bash/aliases/git.sh" >> ~/.bashrc || echo "ok" > /dev/null'
 
 git:
 	rm -f ~/.gitconfig
