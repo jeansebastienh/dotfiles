@@ -93,3 +93,6 @@ set laststatus=2
 " checsyntax
 let g:checksyntax#auto_enable_rx = '.'
 let mapleader = ","
+
+nnoremap <A-Left> :bp<CR>
+nnoremap <A-Right> :bn<CR>
