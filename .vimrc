@@ -16,6 +16,8 @@ Plugin 'Lokaltog/vim-powerline'
 Plugin 'tomtom/checksyntax_vim'
 Plugin 'godlygeek/tabular'
 Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -76,6 +78,8 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 "set wildmode=list:longest,full " Command <Tab> completion, list matches, then longest common part, then all.
 "set whichwrap=b,s,h,l,<,>,[,] " Backspace and cursor keys wrap too
 
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
 " NERDTree config
 "let NERDTreeMapOpenInTab='<ENTER>'
@@ -93,3 +97,6 @@ set laststatus=2
 " checsyntax
 let g:checksyntax#auto_enable_rx = '.'
 let mapleader = ","
+
+nnoremap <A-Left> :bp<CR>
+nnoremap <A-Right> :bn<CR>
