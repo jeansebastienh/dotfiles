@@ -16,3 +16,6 @@ vim:
 	ln -s $(SRCDIR)/.vim ~/.vim
 	vim +PluginInstall +qall
 
+tmux:
+	rm -rf ~/.tmux.conf
+	ln -s $(SRCDIR)/.tmux.conf ~/.tmux.conf
