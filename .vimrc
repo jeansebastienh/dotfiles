@@ -56,6 +56,7 @@ colorscheme vividchalk
 "set background=dark
 
 scriptencoding utf-8
+set encoding=utf-8
 set history=1000 " Store a ton of history (default is 20)
 
 set hidden " Allow buffer switching without saving
