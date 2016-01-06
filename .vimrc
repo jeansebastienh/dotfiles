@@ -101,6 +101,10 @@ let mapleader = ","
 
 nnoremap <A-Left> :bp<CR>
 nnoremap <A-Right> :bn<CR>
+
+nnoremap <A-Up> :m .-2<CR>==
+nnoremap <A-Down> :m .+1<CR>==
+
 if &term =~ '^screen'
     " tmux will send xterm-style keys when xterm-keys is on
     execute "set <xUp>=\e[1;*A"
