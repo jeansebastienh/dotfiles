@@ -9,6 +9,8 @@ bash:
 git:
 	rm -f ~/.gitconfig
 	ln -s $(SRCDIR)/.gitconfig ~/.gitconfig
+	rm -f ~/.gitignore
+	ln -s $(SRCDIR)/gitignore_global ~/.gitignore
 
 vim:
 	rm -rf ~/.vim ~/.vimrc
