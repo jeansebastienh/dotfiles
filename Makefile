@@ -1,7 +1,7 @@
 SRCDIR := $(shell pwd)
 .PHONY: all bash
 
-all: vim git bash tmux
+all: vim git bash tmux ack
 
 bash:
 	bash -c '[[ `grep -c "bash/aliases/git.sh" ~/.bashrc` -eq 0 ]] && echo ". $(SRCDIR)/bash/aliases/git.sh" >> ~/.bashrc || echo "ok" > /dev/null'
@@ -21,3 +21,7 @@ vim:
 tmux:
 	rm -rf ~/.tmux.conf
 	ln -s $(SRCDIR)/.tmux.conf ~/.tmux.conf
+
+ack:
+	rm -rf ~/.ackrc
+	ln -s $(SRCDIR)/.ackrc ~/.ackrc
