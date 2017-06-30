@@ -56,6 +56,7 @@ colorscheme vividchalk
 "set background=dark
 
 scriptencoding utf-8
+set encoding=utf-8
 set history=1000 " Store a ton of history (default is 20)
 
 set hidden " Allow buffer switching without saving
@@ -100,3 +101,14 @@ let mapleader = ","
 
 nnoremap <A-Left> :bp<CR>
 nnoremap <A-Right> :bn<CR>
+
+nnoremap <A-Up> :m .-2<CR>==
+nnoremap <A-Down> :m .+1<CR>==
+
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when xterm-keys is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif

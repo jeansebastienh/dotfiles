@@ -8,6 +8,7 @@
     # space-before-tab : spaces before tabs at the beginning of a line.
     # indent-with-non-tab : lines that begin with eight or more spaces instead of tabs (DISABLED)
     whitespace = trailing-space,space-before-tab,-indent-with-non-tab
+    excludesfile = ~/.gitignore
 [color]
     ui = always
 [alias]
