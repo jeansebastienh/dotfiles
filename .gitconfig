@@ -1,6 +1,7 @@
 [user]
     name = Jean-Sébastien Hedde
-    email = jeanseb@au-fil-du.net
+    email = jshedde@lafourchette.com
+    signingkey = 0B86D807
 [core]
     editor = vim
     # detect and fix some whitespace issues.
@@ -45,3 +46,7 @@
     pushup = "!git push -u origin $(git currentbranch)"
 [push]
 	default = current
+[gpg]
+	program = /usr/bin/gpg2
+[commit]
+	gpgsign = true
