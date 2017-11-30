@@ -115,3 +115,4 @@ endif
 
 au FileType ruby setl sw=2 sts=2 et
 au FileType yml setl sw=2 sts=2 et
+autocmd BufNewFile,BufRead */oxalide/*.json setl noet ci pi sts=0 sw=4 ts=4
