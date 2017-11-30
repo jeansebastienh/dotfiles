@@ -112,3 +112,6 @@ if &term =~ '^screen'
     execute "set <xRight>=\e[1;*C"
     execute "set <xLeft>=\e[1;*D"
 endif
+
+au FileType ruby setl sw=2 sts=2 et
+au FileType yml setl sw=2 sts=2 et
