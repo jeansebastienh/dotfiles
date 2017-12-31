@@ -1,7 +1,10 @@
 SRCDIR := $(shell pwd)
 .PHONY: all bash
 
-all: vim git bash tmux ack
+all: install vim git bash tmux ack
+
+install:
+	sudo dnf -y install tmux vim ack git
 
 bash:
 	bash -c '[[ `grep -c "bash/aliases/git.sh" ~/.bashrc` -eq 0 ]] && echo ". $(SRCDIR)/bash/aliases/git.sh" >> ~/.bashrc || echo "ok" > /dev/null'
