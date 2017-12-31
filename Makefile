@@ -28,3 +28,7 @@ tmux:
 ack:
 	rm -rf ~/.ackrc
 	ln -s $(SRCDIR)/.ackrc ~/.ackrc
+
+psql:
+	rm -rf ~/.psqlrc.conf
+	ln -s $(SRCDIR)/.psqlrc.conf ~/.psqlrc.conf

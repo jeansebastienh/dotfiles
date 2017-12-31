@@ -1,6 +1,7 @@
 [user]
     name = Jean-Sébastien Hedde
     email = jeanseb@au-fil-du.net
+    signingkey =0xAC528239BEC251B6
 [core]
     editor = vim
     # detect and fix some whitespace issues.
@@ -44,4 +45,8 @@
     unstage = reset HEAD
     pushup = "!git push -u origin $(git currentbranch)"
 [push]
-	default = simple
+	default = current
+[gpg]
+	program = /usr/bin/gpg2
+[commit]
+	gpgsign = true
