@@ -1,7 +1,7 @@
 SRCDIR := $(shell pwd)
 .PHONY: all bash
 
-all: install vim git bash tmux ack
+all: install vim git bash tmux ack gpg
 
 install:
 	sudo dnf -y install tmux vim ack git
@@ -32,3 +32,8 @@ ack:
 psql:
 	rm -rf ~/.psqlrc.conf
 	ln -s $(SRCDIR)/.psqlrc.conf ~/.psqlrc.conf
+
+gpg:
+	rm -rf ~/.gnupg/gpg.conf
+	mkdir -p --mode=700 ~/.gnupg
+	ln -s $(SRCDIR)/gpg.conf ~/.gnupg/gpg.conf
