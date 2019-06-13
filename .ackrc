@@ -1,3 +1,4 @@
 --type-set=feature:ext:feature
 --type-set=erb:ext:erb
 --ignore-dir=vendor
+--ignore-dir=reports

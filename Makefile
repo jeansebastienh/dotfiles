@@ -29,10 +29,6 @@ ack:
 	rm -rf ~/.ackrc
 	ln -s $(SRCDIR)/.ackrc ~/.ackrc
 
-psql:
-	rm -rf ~/.psqlrc.conf
-	ln -s $(SRCDIR)/.psqlrc.conf ~/.psqlrc.conf
-
 gpg:
 	rm -rf ~/.gnupg/gpg.conf
 	mkdir -p --mode=700 ~/.gnupg
