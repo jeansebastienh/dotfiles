@@ -1,7 +1,7 @@
 [user]
     name = Jean-Sébastien Hedde
     email = jeanseb@au-fil-du.net
-    signingkey =0xAC528239BEC251B6
+    signingkey =0x03057244C8241371
 [core]
     editor = vim
     # detect and fix some whitespace issues.
